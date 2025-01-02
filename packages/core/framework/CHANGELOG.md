@@ -1,5 +1,19 @@
 # @medusajs/framework
 
+## 2.1.4
+
+### Patch Changes
+
+- [#10768](https://github.com/medusajs/medusa/pull/10768) [`bbf790ea44d0ce0a128a07e66224735f5a2dccf0`](https://github.com/medusajs/medusa/commit/bbf790ea44d0ce0a128a07e66224735f5a2dccf0) Thanks [@thetutlage](https://github.com/thetutlage)! - Refactor/deprecate remote link
+
+- Updated dependencies [[`13ddf27c68fc2831b3661940bc5f27bab23ce8c0`](https://github.com/medusajs/medusa/commit/13ddf27c68fc2831b3661940bc5f27bab23ce8c0), [`bbf790ea44d0ce0a128a07e66224735f5a2dccf0`](https://github.com/medusajs/medusa/commit/bbf790ea44d0ce0a128a07e66224735f5a2dccf0), [`0559d54c18d2e79c78c2b9a348b9873d1a786dea`](https://github.com/medusajs/medusa/commit/0559d54c18d2e79c78c2b9a348b9873d1a786dea)]:
+  - @medusajs/types@2.1.4
+  - @medusajs/modules-sdk@2.1.4
+  - @medusajs/utils@2.1.4
+  - @medusajs/orchestration@2.1.4
+  - @medusajs/workflows-sdk@2.1.4
+  - @medusajs/telemetry@2.1.4
+
 ## 2.1.3
 
 ### Patch Changes
