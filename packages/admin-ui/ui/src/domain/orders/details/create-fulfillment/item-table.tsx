@@ -6,7 +6,7 @@ import ImagePlaceholder from "../../../../components/fundamentals/image-placehol
 import InputField from "../../../../components/molecules/input"
 import { LineItem } from "@medusajs/medusa"
 import clsx from "clsx"
-import { useAdminVariantsInventory } from "medusa-react"
+import { useAdminVariantsInventory, useAdminReservations } from "medusa-react"
 import { useFeatureFlag } from "../../../../providers/feature-flag-provider"
 
 export const getFulfillableQuantity = (item: LineItem): number => {
@@ -77,10 +77,21 @@ const FulfillmentLine = ({
     isFeatureEnabled("inventoryService") &&
     isFeatureEnabled("stockLocationService")
 
-  const { variant, isLoading, refetch } = useAdminVariantsInventory(
-    item.variant_id as string,
-    { enabled: isLocationFulfillmentEnabled }
-  )
+  const {
+    variant,
+    isLoading: isInventoryLoading,
+    refetch,
+  } = useAdminVariantsInventory(item.variant_id as string, {
+    enabled: isLocationFulfillmentEnabled,
+  })
+
+  const { reservations, isLoading: isReservationsLoading } =
+    useAdminReservations({
+      location_id: locationId,
+      line_item_id: item.id,
+    })
+
+  const isLoading = isInventoryLoading || isReservationsLoading
 
   const hasInventoryItem = !!variant?.inventory.length
 
@@ -112,8 +123,13 @@ const FulfillmentLine = ({
       return {}
     }
 
+    const reservedQuantityForLineItem = reservations.reduce(
+      (q, r) => q + r.quantity,
+      0
+    )
+
     return {
-      availableQuantity: locationInventory.available_quantity,
+      availableQuantity: locationInventory.available_quantity + reservedQuantityForLineItem,
       inStockQuantity: locationInventory.stocked_quantity,
     }
   }, [
