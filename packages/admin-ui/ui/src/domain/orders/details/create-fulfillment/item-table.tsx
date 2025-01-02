@@ -88,7 +88,7 @@ const FulfillmentLine = ({
   const { reservations, isLoading: isReservationsLoading } =
     useAdminReservations({
       location_id: locationId,
-      line_item_id: item.id,
+      line_item_id: [item.id],
     })
 
   const isLoading = isInventoryLoading || isReservationsLoading
