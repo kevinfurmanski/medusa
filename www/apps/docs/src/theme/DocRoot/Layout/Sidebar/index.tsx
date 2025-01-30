@@ -83,7 +83,7 @@ export default function DocRootLayoutSidebar({
         >
           <div
             className={clsx(
-              "min-[997px]:top-[57px] min-[997px]:sticky min-[997px]:max-h-screen min-[997px]:[&>div]:max-h-screen"
+              "min-[997px]:top-[101px] min-[997px]:sticky min-[997px]:max-h-screen min-[997px]:[&>div]:max-h-screen"
             )}
             ref={sidebarRef}
           >

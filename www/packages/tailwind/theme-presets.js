@@ -90,6 +90,21 @@ const light = {
 
   "--docs-bg": "var(--docs-bg-base)",
   "--docs-bg-surface": "var(--docs-bg-subtle)",
+
+  "--docs-contrast-bg-base": "rgba(24, 24, 27, 1)",
+  "--docs-contrast-bg-base-pressed": "rgba(63, 63, 70, 1)",
+  "--docs-contrast-bg-base-hover": "rgba(39, 39, 42, 1)",
+  "--docs-contrast-bg-subtle": "rgba(39, 39, 42, 1)",
+  "--docs-contrast-bg-highlight": "rgba(63, 63, 70, 1)",
+  "--docs-contrast-bg-alpha": "rgba(9, 9, 11, 0.8)",
+  "--docs-contrast-fg-primary": "rgba(255, 255, 255, 0.88)",
+  "--docs-contrast-fg-secondary": "rgba(255, 255, 255, 0.56)",
+  "--docs-contrast-border-base": "rgba(255, 255, 255, 0.16)",
+  "--docs-contrast-border-top": "rgba(9, 9, 11, 1)",
+  "--docs-contrast-border-bot": "rgba(255, 255, 255, 0.10)",
+
+  "--docs-alpha-white-alpha-6": "rgba(255, 255, 255, 0.06)",
+  "--docs-alpha-white-alpha-12": "rgba(255, 255, 255, 0.12)",
 }
 
 const dark = {
@@ -184,6 +199,18 @@ const dark = {
 
   "--docs-bg": "var(--docs-bg-subtle)",
   "--docs-bg-surface": "var(--docs-bg-base)",
+
+  "--docs-contrast-bg-base": "rgba(39, 39, 42, 1)",
+  "--docs-contrast-bg-base-pressed": "rgba(82, 82, 91, 1)",
+  "--docs-contrast-bg-base-hover": "rgba(63, 63, 70, 1)",
+  "--docs-contrast-bg-subtle": "rgba(47, 47, 50, 1)",
+  "--docs-contrast-bg-highlight": "rgba(82, 82, 91, 1)",
+  "--docs-contrast-bg-alpha": "rgba(63, 63, 70, 0.9)",
+  "--docs-contrast-fg-primary": "rgba(250, 250, 250, 1)",
+  "--docs-contrast-fg-secondary": "rgba(255, 255, 255, 0.56)",
+  "--docs-contrast-border-base": "rgba(82, 82, 91, 1)",
+  "--docs-contrast-border-top": "rgba(24, 24, 27, 1)",
+  "--docs-contrast-border-bot": "rgba(255, 255, 255, 0.08)",
 }
 
 module.exports = {

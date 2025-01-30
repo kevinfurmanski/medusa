@@ -44,19 +44,24 @@ async function main() {
   } else {
     //retrieve the latest release
     const response = await octokit.request(
-      "GET /repos/{owner}/{repo}/releases/latest",
+      "GET /repos/{owner}/{repo}/releases",
       {
         owner: "medusajs",
         repo: "medusa",
-        sha: "v1.x"
       }
     )
 
-    const version = response.data.tag_name
+    const latestV1Release = response.data.find(
+      (r) => r.tag_name.startsWith("v1.")
+    )
+    if (!latestV1Release) {
+      return
+    }
+    const version = latestV1Release?.tag_name
 
     //add new announcement
     announcement = {
-      id: response.data.html_url,
+      id: latestV1Release?.html_url,
       content: `${version} is out`,
       isCloseable: true,
     }

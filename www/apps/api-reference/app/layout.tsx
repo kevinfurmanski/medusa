@@ -1,9 +1,9 @@
 import "./globals.css"
-import Navbar from "@/components/Navbar"
 import { WideLayout } from "docs-ui"
 import { Inter, Roboto_Mono } from "next/font/google"
 import clsx from "clsx"
 import Providers from "../providers"
+import { NavbarWithBanner } from "../components/Navbar/WithBanner"
 
 export const metadata = {
   title: "Medusa API Reference",
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <WideLayout
       ProvidersComponent={Providers}
-      NavbarComponent={Navbar}
+      NavbarComponent={NavbarWithBanner}
       bodyClassName={clsx(inter.variable, robotoMono.variable)}
     >
       {children}

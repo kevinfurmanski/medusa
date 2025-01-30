@@ -39,7 +39,7 @@ export const Sidebar = ({
         "border-medusa-border-base border-0 border-r border-solid",
         "fixed -left-full top-0 h-screen transition-[left] lg:relative lg:left-0 lg:top-auto lg:h-auto",
         "lg:w-sidebar w-full",
-        mobileSidebarOpen && "!left-0 z-50 top-[57px]",
+        mobileSidebarOpen && "!left-0 z-50 top-[101px]",
         !desktopSidebarOpen && "!absolute !-left-full",
         className
       )}

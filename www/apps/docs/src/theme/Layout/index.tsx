@@ -15,6 +15,9 @@ import type { Props } from "@theme/Layout"
 import useIsBrowser from "@docusaurus/useIsBrowser"
 import { useLocation } from "@docusaurus/router"
 import { useAnalytics } from "docs-ui"
+import { Banner } from "docs-ui"
+import { ExclamationCircleSolid, TriangleRightMini } from "@medusajs/icons"
+import Link from "@docusaurus/Link"
 
 export default function Layout(props: Props): JSX.Element {
   const {
@@ -55,8 +58,26 @@ export default function Layout(props: Props): JSX.Element {
       <PageMetadata title={title} description={description} />
 
       <SkipToContent />
-
-      <Navbar />
+      <div className="sticky top-0 z-[400]">
+        <Banner>
+          <ExclamationCircleSolid className="text-medusa-contrast-fg-secondary" />
+          <span>
+            You&apos;re viewing the documentation for v1, which isn&apos;t the
+            latest Medusa version.
+          </span>
+          <Link
+            to="https://docs.medusajs.com"
+            className={clsx(
+              "inline-flex gap-0.25 items-center rounded-xs",
+              "text-medusa-contrast-fg-primary hover:text-medusa-contrast-fg-secondary group"
+            )}
+          >
+            <span>Latest documentation</span>
+            <TriangleRightMini className="group-hover:translate-x-docs_0.125 transition-transform" />
+          </Link>
+        </Banner>
+        <Navbar />
+      </div>
 
       <div
         id={SkipToContentFallbackId}

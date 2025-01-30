@@ -9,7 +9,7 @@ export default function NavbarMobileSidebarLayout({
 }: Props): JSX.Element {
   const { shown: secondaryMenuShown } = useNavbarSecondaryMenu()
   return (
-    <div className="navbar-sidebar top-[57px] shadow-none">
+    <div className="navbar-sidebar top-[101px] shadow-none">
       <div
         className={clsx("navbar-sidebar__items", {
           "navbar-sidebar__items--show-secondary": secondaryMenuShown,

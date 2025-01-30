@@ -160,6 +160,32 @@ module.exports = {
             },
             border: "var(--docs-code-border)",
           },
+          contrast: {
+            bg: {
+              base: {
+                DEFAULT: "var(--docs-contrast-bg-base)",
+                pressed: "var(--docs-contrast-bg-base-pressed)",
+                hover: "var(--docs-contrast-bg-base-hover)",
+              },
+              subtle: "var(--docs-contrast-bg-subtle)",
+              highlight: "var(--docs-contrast-bg-highlight)",
+              alpha: "var(--docs-contrast-bg-alpha)",
+            },
+            fg: {
+              primary: "var(--docs-contrast-fg-primary)",
+              secondary: "var(--docs-contrast-fg-secondary)",
+            },
+            border: {
+              base: "var(--docs-contrast-border-base)",
+              top: "var(--docs-contrast-border-top)",
+              bot: "var(--docs-contrast-border-bot)",
+            },
+            // not in UI but necessary for show more button
+            button: {
+              DEFAULT: "#3D3D3F",
+              hover: "#505052",
+            },
+          },
         },
         /* docs defaults */
         docs: {

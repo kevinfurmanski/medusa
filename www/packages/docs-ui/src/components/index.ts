@@ -1,6 +1,7 @@
 export * from "./AiAssistant"
 export * from "./AiAssistant/CommandIcon"
 export * from "./Badge"
+export * from "./Banner"
 export * from "./Bordered"
 export * from "./BorderedIcon"
 export * from "./Button"
